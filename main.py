@@ -17,6 +17,7 @@ def main() -> None:
         os.write(fd, JOKE.encode("utf-8"))
     finally:
         os.close(fd)
+    os.chmod("/output/entry.txt", 0o644)
 
 
 if __name__ == "__main__":
